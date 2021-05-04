@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KolkoKrzyzyk"
         mc:Ignorable="d"
         Title="MainWindow" Height="372" Width="500">
-    <Grid x:Name="PlanszaGrid" Width="300" Height="300" Margin="5,5,5,5" VerticalAlignment="Top" HorizontalAlignment="Left" >
+    <Grid x:Name="PlanszaGrid" Width="300" Height="300" Margin="5,5,5,5" VerticalAlignment="Top" HorizontalAlignment="Left">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
@@ -17,14 +17,14 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Button Grid.Column="0" Grid.Row="0" Content="1" />
-        <Button Grid.Column="1" Grid.Row="0" Content="2" />
-        <Button Grid.Column="2" Grid.Row="0" Content="3" />
-        <Button Grid.Column="0" Grid.Row="1" Content="4" />
-        <Button Grid.Column="1" Grid.Row="1" Content="5" />
-        <Button Grid.Column="2" Grid.Row="1" Content="6" />
-        <Button Grid.Column="0" Grid.Row="2" Content="7" />
-        <Button Grid.Column="1" Grid.Row="2" Content="8" />
-        <Button Grid.Column="2" Grid.Row="2" Content="9" />
+        <Button Grid.Column="0" Grid.Row="0" Content="1" Click="GridButton_Click" Name="Btn0"/>
+        <Button Grid.Column="1" Grid.Row="0" Content="2" Click="GridButton_Click" Name="Btn1"/>
+        <Button Grid.Column="2" Grid.Row="0" Content="3" Click="GridButton_Click" Name="Btn2"/>
+        <Button Grid.Column="0" Grid.Row="1" Content="4" Click="GridButton_Click" Name="Btn3"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="5" Click="GridButton_Click" Name="Btn4"/>
+        <Button Grid.Column="2" Grid.Row="1" Content="6" Click="GridButton_Click" Name="Btn5"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="7" Click="GridButton_Click" Name="Btn6"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="8" Click="GridButton_Click" Name="Btn7"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="9" Click="GridButton_Click" Name="Btn8"/>
     </Grid>
 </Window>
