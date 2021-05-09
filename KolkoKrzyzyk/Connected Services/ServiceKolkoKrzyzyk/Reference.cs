@@ -48,14 +48,18 @@ namespace ServiceKolkoKrzyzyk
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
         public int kolumna;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public bool znak;
+        
         public WykonajRuchRequest()
         {
         }
         
-        public WykonajRuchRequest(int wiersz, int kolumna)
+        public WykonajRuchRequest(int wiersz, int kolumna, bool znak)
         {
             this.wiersz = wiersz;
             this.kolumna = kolumna;
+            this.znak = znak;
         }
     }
     
@@ -152,11 +156,12 @@ namespace ServiceKolkoKrzyzyk
             return base.Channel.WykonajRuch(request);
         }
         
-        public bool WykonajRuch(int wiersz, int kolumna, out int wierszServer, out int kolumnaServer)
+        public bool WykonajRuch(int wiersz, int kolumna, bool znak, out int wierszServer, out int kolumnaServer)
         {
             ServiceKolkoKrzyzyk.WykonajRuchRequest inValue = new ServiceKolkoKrzyzyk.WykonajRuchRequest();
             inValue.wiersz = wiersz;
             inValue.kolumna = kolumna;
+            inValue.znak = znak;
             ServiceKolkoKrzyzyk.WykonajRuchResponse retVal = ((ServiceKolkoKrzyzyk.IGraKolkoKrzyzyk)(this)).WykonajRuch(inValue);
             wierszServer = retVal.wierszServer;
             kolumnaServer = retVal.kolumnaServer;

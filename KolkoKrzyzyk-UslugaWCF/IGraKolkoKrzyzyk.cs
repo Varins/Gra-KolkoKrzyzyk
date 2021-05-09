@@ -15,7 +15,7 @@ namespace KolkoKrzyzyk_UslugaWCF
         void Start();
 
         [OperationContract]
-        bool WykonajRuch(int wiersz, int kolumna,
+        bool WykonajRuch(int wiersz, int kolumna, bool znak,
                     out int wierszServer, out int kolumnaServer);
 
         [OperationContract]
